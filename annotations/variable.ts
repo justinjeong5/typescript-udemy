@@ -32,3 +32,12 @@ let point: { x: number; y: number; } = {
 const logNumber: (value: number) => void = (value: number) =>{
   console.log(value);
 };
+
+// annotation vs inference
+let temp: number = 10;
+// popover on variable temp says temp: number
+let temp1 = 10;
+// popover on variable temp1 says temp1: number
+let temp2;
+temp2 = 10;
+// popover on variable temp2 says temp2: Any
