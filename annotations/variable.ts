@@ -41,3 +41,25 @@ let temp1 = 10;
 let temp2;
 temp2 = 10;
 // popover on variable temp2 says temp2: Any
+
+//////////////////////////////////////////
+// When to use annotations
+//////////////////////////////////////////
+
+// 1) Function that returns the 'any' type
+const json = '{ "x": 10, "y": 20}';
+const coordinates: {x: number; y: number;} = JSON.parse(json)
+console.log(coordinates); // { x: 10, y: 20};
+
+// 2) When we declare a variable on one line and initialize it later
+const words = ['red', 'green', 'blue']
+let foundWord: boolean;
+foundWord = words.includes('green');
+
+// 3) Variable whose type that can't be inferred correctly
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+numbers.forEach((value, index) => {
+  if(value > 0) numberAboveZero = index
+})
