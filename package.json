@@ -8,5 +8,9 @@
     "start": "parcel index.html"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/faker": "^5.1.5",
+    "faker": "^5.1.0"
+  }
 }
