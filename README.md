@@ -39,3 +39,33 @@ Typical typescript file structure is Interface definitions for working with this
    "start:run": "nodemon build/index.js",
    "start": "concurrently npm:start:*"
 4. by typing "npm start", all procedures run itself.
+
+### bubble sort
+
+```javascript
+const { length } = this.collection;
+
+for (let end = 0; end < length; end++) {
+   for (let start = 0; start < length - end - 1; start++) {
+      if (this.collection[start] > this.collection[start + 1]){   // comparision
+         const leftHand = this.collection[start];     // swapping
+         this.collection[start] = this.collection[start + 1];
+         this.collection[start + 1] = leftHand;
+      }
+   }
+}
+```
+
+Above code works great when sorting target is array of number. Entire purpose of implementation to sorting using typescript is to apply sorting algorithm for array of number, string, even linked list contains number of string. Here is the fatal error above code: string is kinda weird! Above codes describes bubble sort using two major parts, comparison and swapping. javascript string is immutable and comparison is conducted by not string itself, but ascii values.
+
+```javascript
+let str = 'abcd';
+str[0] = 'x';
+console.log(str) // abcd
+
+"X" > "a"   // false
+```
+
+Simple comparison and swapping doesn't work on string.
+
+<img width="587" alt="Screen Shot 2021-01-12 at 8 26 57 PM" src="https://user-images.githubusercontent.com/44011462/104308857-a328d080-5514-11eb-83a4-93288700dcc2.png">
