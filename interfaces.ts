@@ -2,17 +2,20 @@ interface Vihecle {
   name: string;
   year: number;
   broken: boolean;
+  summary(): string;
 }
 
 const oldCivic = {
   name: 'civic',
   year: 2000,
-  broken: true
+  broken: true,
+  summary(): string {
+    return `Name: ${this.name}`
+  }
 };
 
-const printVehicle = ({name, year, broken}: Vihecle): void => {
-  console.log(`Name: ${name}, Year: ${year}, Broken: ${broken}`)
+const printVehicle = (vehicle: Vihecle): void => {
+  console.log(vehicle.summary());
 }
 
 printVehicle(oldCivic);
- 
