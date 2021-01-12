@@ -2,4 +2,4 @@
 // import { Company } from './Company'
 import { FacadeMap } from './FacadeMap'
 
-const facadeMap = new FacadeMap();
+const facadeMap = new FacadeMap('googleMap');
