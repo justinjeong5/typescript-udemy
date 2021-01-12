@@ -1,7 +1,5 @@
 // import { User } from './User'
 // import { Company } from './Company'
+import { FacadeMap } from './FacadeMap'
 
-const map = new google.maps.Map(document.querySelector('#googleMap'),{
-  zoom: 1,
-  center: { lat: 0, lng: 0}
-});
+const facadeMap = new FacadeMap();
