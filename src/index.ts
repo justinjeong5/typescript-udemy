@@ -1,1 +1,1 @@
-console.log('welcome index.ts')
+import { User } from './User'
