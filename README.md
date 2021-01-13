@@ -123,5 +123,14 @@ Simple comparison and swapping doesn't work on string.
 <img width="587" alt="Screen Shot 2021-01-12 at 8 26 57 PM" src="https://user-images.githubusercontent.com/44011462/104308857-a328d080-5514-11eb-83a4-93288700dcc2.png">
 
 
+### Interface Sortable
+
+![image](https://user-images.githubusercontent.com/44011462/104406128-eaa96e00-55a1-11eb-91f4-858818b1f754.png)
+
 
 ![sorter](https://user-images.githubusercontent.com/44011462/104401573-cba5de80-5597-11eb-99fb-5b1df7383c4c.png)
+
+
+### Class inheritance
+
+![sorter (1)](https://user-images.githubusercontent.com/44011462/104406078-d1a0bd00-55a1-11eb-9a2a-e4eb4a0f64dc.png)

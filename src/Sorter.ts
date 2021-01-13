@@ -4,21 +4,21 @@ export interface Sortable {
   swap(leftIndex: number, rightIndex: number): void;
 }
 
-export class Sorter {
-  constructor(public sortable: Sortable) {}
+export abstract class Sorter {
+  
+  abstract length: number;
+  abstract compare(leftIndex: number, rightIndex: number): boolean;
+  abstract swap(leftIndex: number, rightIndex: number): void;
 
   sort(): void {
-    const { length } = this.sortable;
+    const { length } = this;
 
     for (let end = 0; end < length; end++) {
       for (let start = 0; start < length - end - 1; start++) { 
-        if (this.sortable.compare(start, start + 1)){
-          this.sortable.swap(start, start + 1);
+        if (this.compare(start, start + 1)){
+          this.swap(start, start + 1);
         } 
       }
     }
-  }
-  printCollection(): void{
-    console.log(this.sortable)
   }
 }
