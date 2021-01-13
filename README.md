@@ -101,4 +101,8 @@ npm i @types/node
 
 ### abstract class CsvFileReader
 
-![CsvFileReader](https://user-images.githubusercontent.com/44011462/104423920-0886cb00-55c2-11eb-92fc-adfdbf069534.png)
+#### inheritance
+<img width='400px' src='https://user-images.githubusercontent.com/44011462/104423920-0886cb00-55c2-11eb-92fc-adfdbf069534.png'>
+
+#### composition
+<img width='400px' src='https://user-images.githubusercontent.com/44011462/104431101-db8ae600-55ca-11eb-814b-f6662be557e6.png'>
