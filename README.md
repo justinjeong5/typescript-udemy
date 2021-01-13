@@ -98,3 +98,7 @@ if error comes up,
 ```bash
 npm i @types/node 
 ```
+
+### abstract class CsvFileReader
+
+![CsvFileReader](https://user-images.githubusercontent.com/44011462/104423920-0886cb00-55c2-11eb-92fc-adfdbf069534.png)
