@@ -84,3 +84,17 @@
    ```
    ![image](https://user-images.githubusercontent.com/44011462/104399974-1d009e80-5595-11eb-88b4-317ecba91804.png)
 
+
+## Nodejs - csv
+
+### fs.readFileSync(path[, options])
+[Node.js documentation](#https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options)
+
+```ts
+// src/index.ts
+import fs from 'fs'  // error
+```
+if error comes up, 
+```bash
+npm i @types/node 
+```
