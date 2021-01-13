@@ -1,15 +1,6 @@
 import { dateStringToDate } from './utils'
 import { MatchResult } from './MatchResult'
-
-type MatchData = {
-  date: Date, 
-  homeTeam: string, 
-  awayTeam:string, 
-  homeScore: number, 
-  awayScore: number, 
-  winner: MatchResult, 
-  referee:string
-}
+import { MatchData } from './MatchData'
 
 interface DataReader {
   read(): void;
