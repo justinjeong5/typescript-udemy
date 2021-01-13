@@ -1,5 +1,6 @@
-# typescript-udemy
+# typescript-udemy  
 
+## ✨Gist
 Strong resuabiliy of typescript is Interfaces + Classes
 
 ![tsReuseAndScale](https://user-images.githubusercontent.com/44011462/104294813-027de500-5503-11eb-85cf-bfc3e7bebc60.png)
@@ -9,7 +10,9 @@ Typical typescript file structure is Interface definitions for working with this
 
 ![tsFileStructure](https://user-images.githubusercontent.com/44011462/104294539-a7e48900-5502-11eb-8d84-1169fbfb710e.png)
 
-## basic typescript compiler usage using "tsc"
+## ⌨️Usage 
+
+### basic typescript compiler usage using "tsc"
 
 1. Create src/index.ts
    ```bash
@@ -62,7 +65,7 @@ Typical typescript file structure is Interface definitions for working with this
       tsc -w
       ```
 
-## actual project run
+### actual project run
 
 1. initiate project for npm
    ```bash
@@ -92,7 +95,9 @@ Typical typescript file structure is Interface definitions for working with this
    ![image](https://user-images.githubusercontent.com/44011462/104399974-1d009e80-5595-11eb-88b4-317ecba91804.png)
 
 
-### bubble sort
+## 🔥Sorter
+
+### Bubble sort
 
 ```javascript
 const { length } = this.collection;
@@ -125,12 +130,16 @@ Simple comparison and swapping doesn't work on string.
 
 ### Interface Sortable
 
-![image](https://user-images.githubusercontent.com/44011462/104406128-eaa96e00-55a1-11eb-91f4-858818b1f754.png)
+child class neet to implement the property and methods of Sortable: length, compare, swap. 
 
+<img width='500px' src='https://user-images.githubusercontent.com/44011462/104406128-eaa96e00-55a1-11eb-91f4-858818b1f754.png'>
 
-![sorter](https://user-images.githubusercontent.com/44011462/104401573-cba5de80-5597-11eb-99fb-5b1df7383c4c.png)
-
+<img width='500px' src='https://user-images.githubusercontent.com/44011462/104401573-cba5de80-5597-11eb-99fb-5b1df7383c4c.png'>
 
 ### Class inheritance
 
-![sorter (1)](https://user-images.githubusercontent.com/44011462/104406078-d1a0bd00-55a1-11eb-9a2a-e4eb4a0f64dc.png)
+<img width='500px' src='https://user-images.githubusercontent.com/44011462/104406078-d1a0bd00-55a1-11eb-9a2a-e4eb4a0f64dc.png'>
+
+### Abstract class
+
+<img width='500px' src='https://user-images.githubusercontent.com/44011462/104410160-21d04d00-55ab-11eb-8808-c4084cae4959.png'>
