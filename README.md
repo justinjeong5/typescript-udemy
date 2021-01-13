@@ -11,34 +11,86 @@ Typical typescript file structure is Interface definitions for working with this
 
 ## basic typescript compiler usage using "tsc"
 
-1. create src/index.ts
-   1. index.ts should be into /src
-2. create directory /build
-   1. /build should locate on root directory
-3. tsc --init
-   1. type "tsc --init" on project root directory terminal to TypeScriptCompiler initiate project for typescript
-   2. if tsc is not installed, 
-      1. npm i -g typescript ts-node
-      2. if 'EACCESS' comes up, sudo npm i -g typescript ts-node
-   3. tsconfig.json will be made.
-4. configure tsconfing.json
-   1. comment out again "outDir", "rootDir" to undo comment out
-      1. "rootDir": "./src"
-      2. "outDir": "./build"
-5. tsc -w
-   1. using "tsc -w", typescript compiler keep watching code change and recompile again, as soon as modification detected.
+1. Create src/index.ts
+   ```bash
+   mkdir src
+   cd src
+   pwd      // it should be like ".../{current project}/src"
+   echo > index.ts
+   ```
+2. Create directory /build
+   ```bash
+   cd ..
+   pwd      // it should be like ".../{current project}"
+   mkdir build
+   ```
+3. Typescript compiler initialization
+   ```bash
+   tsc --init
+   ```
+   
+   1. if tsc is not installed, 
+      ```bash
+      npm i -g typescript ts-node
+      ```   
 
-## actual run project
+   2. if 'EACCESS' comes up
+      ```bash
+      sudo npm i -g typescript ts-node
+      ```
+
+   tsconfig.json will be made like below.
+   ![image](https://user-images.githubusercontent.com/44011462/104399707-9055e080-5594-11eb-8afa-3b48060240c4.png)
+
+
+4. Configure tsconfing.json
+   1. comment out again "outDir", "rootDir" to undo comment out
+      ```json
+      //tsconfing.json
+      ...
+      "compilerOptions": {
+         ...
+         "rootDir": "./src",
+         "outDir": "./build",
+         ...
+      }
+      ...
+      ```
+5. Typescript compiler watches
+   tsc keeps watching code changed and recompiles.
+      ```bash
+      tsc -w
+      ```
+
+## actual project run
 
 1. initiate project for npm
-   1. type npm init on root directory terminal
+   ```bash
+   pwd      // it should be like ".../{current project}"
+   npm init
+   ```
 2. install nodemon & concurrently
-   1. npm i nodemon concurrently
+   ```bash
+   npm i nodemon concurrently
+   ```
 3. configure package.json scripts
-   "start:build": "tsc -w",
-   "start:run": "nodemon build/index.js",
-   "start": "concurrently npm:start:*"
+   ```json
+   // package.json
+   ...
+   "scripts": {
+      ...
+      "start:build": "tsc -w",
+      "start:run": "nodemon build/index.js",
+      "start": "concurrently npm:start:*"
+   }
+   ...
+   ```
 4. by typing "npm start", all procedures run itself.
+   ```bash
+   npm start
+   ```
+   ![image](https://user-images.githubusercontent.com/44011462/104399974-1d009e80-5595-11eb-88b4-317ecba91804.png)
+
 
 ### bubble sort
 
