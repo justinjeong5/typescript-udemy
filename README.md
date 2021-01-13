@@ -121,3 +121,7 @@ console.log(str) // abcd
 Simple comparison and swapping doesn't work on string.
 
 <img width="587" alt="Screen Shot 2021-01-12 at 8 26 57 PM" src="https://user-images.githubusercontent.com/44011462/104308857-a328d080-5514-11eb-83a4-93288700dcc2.png">
+
+
+
+![sorter](https://user-images.githubusercontent.com/44011462/104401573-cba5de80-5597-11eb-99fb-5b1df7383c4c.png)
