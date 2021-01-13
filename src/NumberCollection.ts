@@ -1,4 +1,6 @@
-export class NumberCollection {
+import { Sortable } from './Sorter'
+
+export class NumberCollection implements Sortable {
   constructor(public data: number[]) {}
 
   get length(): number {  // make length() -> .length as if it is a kind of property.
