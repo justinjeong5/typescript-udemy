@@ -3,10 +3,14 @@ import { User } from './models/User'
 const user = new User({name:'justin', age:31});
 
 user.on('click', ()=>{
-  console.log('clicked')
+  console.log('clicked #1')
+})
+user.on('click', ()=>{
+  console.log('clicked #2')
 })
 user.on('change', ()=>{
-  console.log('changed')
+  console.log('changed #1')
 })
 
-console.log(user);
+user.trigger('click');
+user.trigger('change');

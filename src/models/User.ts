@@ -25,4 +25,12 @@ export class User {
     this.events[eventName] = handler;
   }
 
+  trigger(eventName: string): void {
+    const handler = this.events[eventName];
+    if(!handler || handler.length === 0) return;
+
+    handler.forEach(callback => {
+      callback()
+    })
+  }
 }
