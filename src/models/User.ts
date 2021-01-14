@@ -45,4 +45,13 @@ export class User {
       this.set(response.data);
     })
   }
+
+  save(): void {
+    const id = this.get('id');
+    if(id) {
+      axios.put(`/users/${id}`, this.data)
+    } else {
+      axios.post('/users', this.data)
+    }
+  }
 }
