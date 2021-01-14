@@ -1,10 +1,5 @@
-import axios from 'axios';
+import { User } from './models/User'
 
-axios.defaults.baseURL = 'http://localhost:3000';
+const user = new User({ id: 1 });
 
-axios.post('/users', {
-  name: 'justin',
-  age: 31
-})
-
-axios.get('/users/1')
+user.fetch();

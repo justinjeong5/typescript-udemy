@@ -1,4 +1,9 @@
+import axios, { AxiosResponse } from "axios";
+
+axios.defaults.baseURL = 'http://localhost:3000';
+
 interface UserProps {
+  id?: number;
   name?: string;
   age?: number;
 }
@@ -31,6 +36,13 @@ export class User {
 
     handler.forEach(callback => {
       callback()
+    })
+  }
+
+  fetch(): void {
+    axios.get(`/users/${this.get('id')}`)
+    .then((response: AxiosResponse): void => {
+      this.set(response.data);
     })
   }
 }
