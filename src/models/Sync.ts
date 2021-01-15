@@ -1,11 +1,12 @@
 import axios, { AxiosPromise } from "axios";
-axios.defaults.baseURL = 'http://localhost:3000';
 
 interface Identifiable {
-  id: number;
+  id?: number;
 }
 
 export class Sync<T extends Identifiable> {
+  constructor(public rootUrl: string){}
+
   fetch(id: number): AxiosPromise {
     return axios.get(`/users/${id}`)
   }
@@ -13,9 +14,9 @@ export class Sync<T extends Identifiable> {
   save(data: T): AxiosPromise {
     const { id } = data;
     if(id) {
-      return axios.put(`/users/${id}`, data)
+      return axios.put(`${this.rootUrl}/${id}`, data)
     } else {
-      return axios.post('/users', data)
+      return axios.post(this.rootUrl, data)
     }
   }
 }
