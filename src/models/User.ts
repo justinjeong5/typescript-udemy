@@ -29,7 +29,7 @@ export class User extends Model<UserProps> {
   }
 
   setRandomAge(): void {
-    const age = Math.random() * 9 + 20;
+    const age = Math.round(Math.random() * 9) + 20;
     this.set({ age });
   }
 }
