@@ -16,3 +16,7 @@
 ### Class User composition
 <img width='600px' src='https://user-images.githubusercontent.com/44011462/104551106-940f6300-5679-11eb-9894-d1d3e7d8d7f5.png'>
 
+#### Extracting View from UserForm
+![View](https://user-images.githubusercontent.com/44011462/104883446-1bc1de00-59a8-11eb-8999-fb6520656c4d.png)
+
+Composition gets too many relations between UserForm and HtmlRenderer. in this case inheritance it better.
